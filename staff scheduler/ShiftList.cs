@@ -19,16 +19,6 @@ namespace staff_scheduler
         {
             Shifts.Add(shift);
         }
-
-        public void RemoveShift(Shift shift)
-        {
-            Shifts.Remove(shift);
-        }
-
-        public Shift GetShift(int shiftId)
-        {
-            return Shifts.FirstOrDefault(s => s.ShiftId == shiftId);
-        }
     }
 
 }

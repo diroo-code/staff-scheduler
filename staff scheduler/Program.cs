@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using staff_scheduler;
 
 namespace StaffManagementSystem
 {
@@ -134,92 +135,8 @@ namespace StaffManagementSystem
             }
         }
     }
-
-    // Staff class
-    public class Staff
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Position { get; set; }
-        public List<TaskAllocation> TaskAllocations { get; set; }
-
-        public Staff()
-        {
-            TaskAllocations = new List<TaskAllocation>();
-        }
-
-        public void AssignToShift(Shift shift)
-        {
-            shift.AddStaff(this);
-        }
-    }
-
-    // StaffList class
-    public class StaffList
-    {
-        public List<Staff> StaffMembers { get; private set; }
-
-        public StaffList()
-        {
-            StaffMembers = new List<Staff>();
-        }
-
-        public void AddStaff(Staff staff)
-        {
-            StaffMembers.Add(staff);
-        }
-
-        public Staff GetStaff(int id)
-        {
-            return StaffMembers.FirstOrDefault(s => s.Id == id);
-        }
-    }
-
-    // Shift class
-    public class Shift
-    {
-        public int ShiftId { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public List<Staff> AssignedStaff { get; set; }
-
-        public Shift()
-        {
-            AssignedStaff = new List<Staff>();
-        }
-
-        public void AddStaff(Staff staff)
-        {
-            AssignedStaff.Add(staff);
-        }
-    }
-
-    // ShiftList class
-    public class ShiftList
-    {
-        public List<Shift> Shifts { get; private set; }
-
-        public ShiftList()
-        {
-            Shifts = new List<Shift>();
-        }
-
-        public void AddShift(Shift shift)
-        {
-            Shifts.Add(shift);
-        }
-    }
-
-    // TaskAllocation class
-    public class TaskAllocation
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public Staff AssignedStaff { get; set; }
-
-        public void AssignTask(Staff staff)
-        {
-            AssignedStaff = staff;
-        }
-    }
 }
+
+
+ 
+   

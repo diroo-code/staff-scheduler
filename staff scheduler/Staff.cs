@@ -22,11 +22,5 @@ namespace staff_scheduler
         {
             shift.AddStaff(this);
         }
-
-        public List<TaskAllocation> GetTaskAllocations()
-        {
-            return TaskAllocations;
-        }
     }
-
 }
