@@ -16,11 +16,6 @@ namespace staff_scheduler
         {
             AssignedStaff = staff;
         }
-
-        public string GetTaskDetails()
-        {
-            return $"{TaskName} (ID: {TaskId})";
-        }
     }
-
 }
+

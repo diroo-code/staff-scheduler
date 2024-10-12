@@ -20,11 +20,6 @@ namespace staff_scheduler
             StaffMembers.Add(staff);
         }
 
-        public void RemoveStaff(Staff staff)
-        {
-            StaffMembers.Remove(staff);
-        }
-
         public Staff GetStaff(int id)
         {
             return StaffMembers.FirstOrDefault(s => s.Id == id);
